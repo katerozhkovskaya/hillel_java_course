@@ -1,8 +1,5 @@
 package ithillel.lesson2.part2.animals;
 
-import lombok.experimental.Accessors;
-
-@Accessors
 public class Dog extends Animal {
 
     public Dog(String name) {

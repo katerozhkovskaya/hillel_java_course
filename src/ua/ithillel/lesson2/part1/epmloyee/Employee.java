@@ -1,4 +1,4 @@
-package ithillel.lesson2.part1.epmloyee;
+package part1.epmloyee;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

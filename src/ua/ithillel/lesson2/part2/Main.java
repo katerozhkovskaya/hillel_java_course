@@ -1,7 +1,7 @@
-package ithillel.lesson2.part2;
+package part2;
 
-import ithillel.lesson2.part2.animals.Cat;
-import ithillel.lesson2.part2.animals.Dog;
+import part2.animals.Cat;
+import part2.animals.Dog;
 
 public class Main {
     public static void main(String[] args) {

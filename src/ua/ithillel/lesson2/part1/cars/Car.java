@@ -1,4 +1,4 @@
-package ithillel.lesson2.part1.cars;
+package part1.cars;
 
 public class Car {
 

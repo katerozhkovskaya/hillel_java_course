@@ -1,6 +1,6 @@
-package ithillel.lesson2.part1;
+package part1;
 
-import ithillel.lesson2.part1.epmloyee.Employee;
+import part1.epmloyee.Employee;
 
 public class Main {
     public static void main(String[] args) {

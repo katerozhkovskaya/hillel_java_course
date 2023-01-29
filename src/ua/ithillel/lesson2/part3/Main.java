@@ -1,9 +1,10 @@
-package ithillel.lesson2.part3;
+package part3;
 
-import ithillel.lesson2.part3.shapes.Circle;
-import ithillel.lesson2.part3.shapes.Shape;
-import ithillel.lesson2.part3.shapes.Square;
-import ithillel.lesson2.part3.shapes.Triangle;
+
+import part3.shapes.Circle;
+import part3.shapes.Shape;
+import part3.shapes.Square;
+import part3.shapes.Triangle;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ithillel.lesson2.part2.animals;
+package part2.animals;
 
 public class Cat extends Animal {
 

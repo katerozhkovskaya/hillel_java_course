@@ -31,7 +31,7 @@ public class FifthTask {
 
     public static String getWordToGuess() {
         Random randomWord = new Random();
-        return (String) Array.get(WORDS, randomWord.nextInt(WORDS.length));
+        return WORDS[randomWord.nextInt(WORDS.length)];
     }
 
     public static String compareWord(String enteredWord, String guessedWord) {
@@ -40,7 +40,7 @@ public class FifthTask {
             output = "You guessed it! Congratulations!";
         } else {
             int minWordLenth = Math.min(guessedWord.length(), enteredWord.length());
-            for (int j = 0; j <= 15; j++) {
+            for (int j = 0; j < 15; j++) {
                 if (j < minWordLenth && enteredWord.charAt(j) == guessedWord.charAt(j)) {
                     output = output.concat(String.valueOf(guessedWord.charAt(j)));
 

@@ -13,9 +13,6 @@ public class FourthTask {
     }
 
     public static Boolean isPalindrome(String line) {
-        if (line.equalsIgnoreCase(new StringBuilder(line).reverse().toString())) {
-            return true;
-        }
-        return false;
+        return line.equalsIgnoreCase(new StringBuilder(line).reverse().toString());
     }
 }

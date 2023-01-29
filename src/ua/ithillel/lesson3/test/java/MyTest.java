@@ -63,8 +63,8 @@ public class MyTest {
 
     private static Stream<Arguments> dataForfindWordPosition() {
         return Stream.of(
-                Arguments.of("kateryna", "ry",5),
-                Arguments.of("kateryna", "tery", 3),
+                Arguments.of("kateryna", "ry",4),
+                Arguments.of("kateryna", "tery", 2),
                 Arguments.of("kateryna", "ro",-1)
         );
     }

@@ -1,5 +1,6 @@
 import lesson7.FileData;
 import lesson7.FileNavigator;
+import lesson7.PathNotEqualFilePathException;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class FileNavigatorTest {
 
 
     @Test
-    public void checkAddToNewPath() {
+    public void checkAddToNewPath() throws PathNotEqualFilePathException {
         FileData file = new FileData("file.txt", 100, PATH_1);
 
         fileNavigator.add(PATH_1, file);
@@ -23,7 +24,7 @@ public class FileNavigatorTest {
     }
 
     @Test
-    public void checkAddToExistPath() {
+    public void checkAddToExistPath() throws PathNotEqualFilePathException {
         FileData file1 = new FileData("file1.txt", 100, PATH_1);
         FileData file2 = new FileData("file2.txt", 100, PATH_1);
         fileNavigator.add(PATH_1, file1);
@@ -34,7 +35,7 @@ public class FileNavigatorTest {
     }
 
     @Test
-    public void checkFind() {
+    public void checkFind() throws PathNotEqualFilePathException {
         FileData file1 = new FileData("file1.txt", 101, PATH_1);
         FileData file2 = new FileData("file2.txt", 102, PATH_1);
         FileData file3 = new FileData("file3.txt", 103, PATH_2);
@@ -54,7 +55,7 @@ public class FileNavigatorTest {
     }
 
     @Test
-    public void testFilterBySize() {
+    public void testFilterBySize() throws PathNotEqualFilePathException {
         FileData file1 = new FileData("file1", 100, PATH_1);
         FileData file2 = new FileData("file2", 200, PATH_2);
         FileData file3 = new FileData("file3", 300, PATH_3);
@@ -71,7 +72,7 @@ public class FileNavigatorTest {
     }
 
     @Test
-    public void testRemove() {
+    public void testRemove() throws PathNotEqualFilePathException {
         FileData file1 = new FileData("file1", 100, PATH_1);
         FileData file2 = new FileData("file2", 200, PATH_1);
 
@@ -83,7 +84,7 @@ public class FileNavigatorTest {
     }
 
     @Test
-    public void testSortBySize() {
+    public void testSortBySize() throws PathNotEqualFilePathException {
         FileData file1 = new FileData("file1", 100, PATH_1);
         FileData file2 = new FileData("file2", 200, PATH_1);
         FileData file3 = new FileData("file3", 300, PATH_2);

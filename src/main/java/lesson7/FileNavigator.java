@@ -9,23 +9,20 @@ public class FileNavigator {
         filesByPath = new HashMap<>();
     }
 
-    public void add(String path, FileData file) {
-        try {
-            if (!file.getPath().equals(path)) {
-                throw new PathNotEqualFilePathException("Шлях-ключ і шлях до файлу не збігаються");
-            }
-            if (!filesByPath.containsKey(path)) {
-                List<FileData> filesList = new ArrayList();
-                filesList.add(file);
-                filesByPath.put(path, filesList);
-            } else {
-                List<FileData> filesList = filesByPath.get(path);
-                filesList.add(file);
-            }
-        } catch (PathNotEqualFilePathException ex) {
-            System.out.println(ex.getMessage());
+    public void add(String path, FileData file) throws PathNotEqualFilePathException {
+        if (!file.getPath().equals(path)) {
+            throw new PathNotEqualFilePathException("Шлях-ключ і шлях до файлу не збігаються");
+        }
+        if (!filesByPath.containsKey(path)) {
+            List<FileData> filesList = new ArrayList();
+            filesList.add(file);
+            filesByPath.put(path, filesList);
+        } else {
+            List<FileData> filesList = filesByPath.get(path);
+            filesList.add(file);
         }
     }
+
 
     public List<FileData> find(String path) {
         return filesByPath.get(path);

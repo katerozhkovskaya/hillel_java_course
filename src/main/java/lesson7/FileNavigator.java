@@ -32,15 +32,10 @@ public class FileNavigator {
     }
 
     public List<FileData> filterBySize(long maxSize) {
-        List<FileData> result = new ArrayList<>();
-        for (List<FileData> files : filesByPath.values()) {
-            for (FileData file : files) {
-                if (file.getSize() <= maxSize) {
-                    result.add(file);
-                }
-            }
-        }
-        return result;
+        return filesByPath.values().stream()
+                .flatMap(Collection::stream)
+                .filter(file -> file.getSize() <= maxSize)
+                .toList();
     }
 
     public void remove(String path) {
@@ -48,11 +43,9 @@ public class FileNavigator {
     }
 
     public List<FileData> sortBySize() {
-        List<FileData> result = new ArrayList<>();
-        for (List<FileData> files : filesByPath.values()) {
-            result.addAll(files);
-        }
-        result.sort(Comparator.comparingInt(FileData::getSize));
-        return result;
+        return filesByPath.values().stream()
+                .flatMap(Collection::stream)
+                .sorted(Comparator.comparingInt(FileData::getSize))
+                .toList();
     }
 }

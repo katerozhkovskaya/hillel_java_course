@@ -1,7 +1,7 @@
-package main.java.lesson2.part2;
+package lesson2.part2;
 
-import main.java.lesson2.part2.animals.Cat;
-import main.java.lesson2.part2.animals.Dog;
+import lesson2.part2.animals.Cat;
+import lesson2.part2.animals.Dog;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package main.java.lesson2.part1;
+package lesson2.part1;
 
 
-import main.java.lesson2.part1.epmloyee.Employee;
+import lesson2.part1.epmloyee.Employee;
 
 public class Main {
     public static void main(String[] args) {

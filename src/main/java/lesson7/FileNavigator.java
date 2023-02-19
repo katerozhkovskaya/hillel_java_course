@@ -52,7 +52,7 @@ public class FileNavigator {
         for (List<FileData> files : filesByPath.values()) {
             result.addAll(files);
         }
-        result.sort(Comparator.comparingInt((FileData::getSize)));
+        result.sort(Comparator.comparingLong(FileData::getSize));
         return result;
     }
 }

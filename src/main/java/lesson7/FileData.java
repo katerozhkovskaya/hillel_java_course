@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 public class FileData {
     private String name;
-    private int size;
+    private long size;
     private String path;
 
 }

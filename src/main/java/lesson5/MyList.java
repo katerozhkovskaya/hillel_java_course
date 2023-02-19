@@ -1,8 +1,8 @@
-package lesson5;
+package main.java.lesson5;
 
 import java.util.Arrays;
 
-public class MyList implements HillelList {
+public class MyList implements lesson5.HillelList {
 
     private final int INIT_SIZE = 4;
     private String[] array = new String[INIT_SIZE];

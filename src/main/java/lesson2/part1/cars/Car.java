@@ -1,4 +1,4 @@
-package lesson2.part1.cars;
+package main.java.lesson2.part1.cars;
 
 public class Car {
 

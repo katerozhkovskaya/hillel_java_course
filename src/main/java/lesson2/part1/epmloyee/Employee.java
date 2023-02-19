@@ -1,4 +1,4 @@
-package lesson2.part1.epmloyee;
+package main.java.lesson2.part1.epmloyee;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

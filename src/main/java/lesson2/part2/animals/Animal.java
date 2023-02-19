@@ -1,4 +1,4 @@
-package lesson2.part2.animals;
+package main.java.lesson2.part2.animals;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

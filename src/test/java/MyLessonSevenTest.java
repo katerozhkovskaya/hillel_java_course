@@ -1,4 +1,6 @@
-import lesson5.MyList;
+package test.java;
+
+import main.java.lesson5.MyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

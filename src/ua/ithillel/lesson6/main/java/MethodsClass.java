@@ -1,3 +1,5 @@
+package ua.ithillel.lesson6.main.java;
+
 import java.util.*;
 import java.util.stream.Collectors;
 

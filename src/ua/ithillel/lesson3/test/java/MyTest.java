@@ -1,3 +1,4 @@
+package ua.ithillel.lesson3.test.java;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -6,11 +7,11 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static part1.FirstTask.findSymbolOccurance;
-import static part2.SecondTask.findWordPosition;
-import static part3.ThirdTask.stringReverse;
-import static part4.FourthTask.isPalindrome;
-import static part5.FifthTask.compareWord;
+import static ua.ithillel.lesson3.main.java.part1.FirstTask.findSymbolOccurance;
+import static ua.ithillel.lesson3.main.java.part2.SecondTask.findWordPosition;
+import static ua.ithillel.lesson3.main.java.part3.ThirdTask.stringReverse;
+import static ua.ithillel.lesson3.main.java.part4.FourthTask.isPalindrome;
+import static ua.ithillel.lesson3.main.java.part5.FifthTask.compareWord;
 
 
 public class MyTest {
@@ -80,7 +81,7 @@ public class MyTest {
     private static Stream<Arguments> dataForCompareWord() {
         return Stream.of(
                 Arguments.of("apple", "apple", "You guessed it! Congratulations!"),
-                Arguments.of("pepper", "peanut", "pe##############")
+                Arguments.of("pepper", "peanut", "pe#############")
         );
     }
 }

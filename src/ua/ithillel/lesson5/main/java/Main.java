@@ -1,3 +1,5 @@
+package ua.ithillel.lesson5.main.java;
+
 public class Main {
     public static void main(String[] args) {
         MyList list1 = new MyList();

@@ -1,9 +1,10 @@
-package part1;
+package ua.ithillel.lesson4.main.java.part1;
 
 import java.util.Random;
 
-import static part1.ArrayValueCalculator.doCalc;
-import static part1.ArrayValueFiller.doFill;
+import static ua.ithillel.lesson4.main.java.part1.ArrayValueCalculator.doCalc;
+import static ua.ithillel.lesson4.main.java.part1.ArrayValueFiller.doFill;
+
 
 public class MainClass {
     public final static int MAX_ARRAY_LENGTH = 4;

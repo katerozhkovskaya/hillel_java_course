@@ -1,4 +1,4 @@
-package part1;
+package ua.ithillel.lesson3.main.java.part1;
 
 import java.util.Scanner;
 

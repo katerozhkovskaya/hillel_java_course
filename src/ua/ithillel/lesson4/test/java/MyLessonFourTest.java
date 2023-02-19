@@ -1,15 +1,17 @@
+package ua.ithillel.lesson4.test.java;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import part1.ArrayDataExeption;
-import part1.ArraySizeColumnException;
-import part1.ArraySizeRowException;
+import ua.ithillel.lesson4.main.java.part1.ArrayDataExeption;
+import ua.ithillel.lesson4.main.java.part1.ArraySizeColumnException;
+import ua.ithillel.lesson4.main.java.part1.ArraySizeRowException;
 
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
-import static part1.ArrayValueCalculator.doCalc;
+import static ua.ithillel.lesson4.main.java.part1.ArrayValueCalculator.doCalc;
 
 
 public class MyLessonFourTest {

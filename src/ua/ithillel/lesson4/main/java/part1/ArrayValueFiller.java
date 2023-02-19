@@ -1,8 +1,9 @@
-package part1;
+package ua.ithillel.lesson4.main.java.part1;
+
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-import static part1.MainClass.MAX_ARRAY_LENGTH;
+import static ua.ithillel.lesson4.main.java.part1.MainClass.MAX_ARRAY_LENGTH;
 
 public class ArrayValueFiller {
     public final static int AMOUNT_OF_RANDOM_SYMBOL = 1;

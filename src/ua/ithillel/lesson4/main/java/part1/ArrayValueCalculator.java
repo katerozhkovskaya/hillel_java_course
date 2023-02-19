@@ -1,6 +1,7 @@
-package part1;
+package ua.ithillel.lesson4.main.java.part1;
 
-import static part1.MainClass.MAX_ARRAY_LENGTH;
+
+import static ua.ithillel.lesson4.main.java.part1.MainClass.MAX_ARRAY_LENGTH;
 
 public class ArrayValueCalculator {
 

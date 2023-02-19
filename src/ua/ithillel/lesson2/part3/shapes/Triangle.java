@@ -1,4 +1,4 @@
-package part3.shapes;
+package ua.ithillel.lesson2.part3.shapes;
 
 import lombok.AllArgsConstructor;
 

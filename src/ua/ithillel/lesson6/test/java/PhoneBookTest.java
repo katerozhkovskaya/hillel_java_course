@@ -1,9 +1,11 @@
+package ua.ithillel.lesson6.test.java;
+
 import org.junit.jupiter.api.Test;
-import phonebook.PhoneBook;
-import phonebook.Record;
+import ua.ithillel.lesson6.main.java.phonebook.PhoneBook;
+import ua.ithillel.lesson6.main.java.phonebook.Record;
 
-
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class PhoneBookTest {
 
@@ -11,9 +13,9 @@ public class PhoneBookTest {
     public void checkAdd() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add(new Record("Kate", "1234"));
-        assertThat(phoneBook.getRecordList().size()).isEqualTo(1);
+        assertEquals(phoneBook.getRecordList().size(), 1);
         phoneBook.add(new Record("Alice", "8888"));
-        assertThat(phoneBook.getRecordList().size()).isEqualTo(2);
+        assertEquals(phoneBook.getRecordList().size(), 2);
 
     }
 
@@ -21,8 +23,8 @@ public class PhoneBookTest {
     public void checkFind() {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add(new Record("Kate", "1234"));
-        assertThat(phoneBook.find("Kate")).isEqualTo(new Record("Kate", "1234"));
-        assertThat(phoneBook.find("Alice")).isNull();
+        assertEquals(phoneBook.find("Kate"), new Record("Kate", "1234"));
+        assertNull(phoneBook.find("Alice"));
 
     }
 
@@ -35,8 +37,8 @@ public class PhoneBookTest {
         phoneBook.add(new Record("Alice", "5555"));
         phoneBook.add(new Record("Alice", "6666"));
 
-        assertThat(phoneBook.findAll("Kate").size()).isEqualTo(2);
-        assertThat(phoneBook.findAll("Alice").size()).isEqualTo(3);
-        assertThat(phoneBook.findAll("Marta").size()).isEqualTo(0);
+        assertEquals(phoneBook.findAll("Kate").size(), 2);
+        assertEquals(phoneBook.findAll("Alice").size(), 3);
+        assertEquals(phoneBook.findAll("Marta").size(), 0);
     }
 }

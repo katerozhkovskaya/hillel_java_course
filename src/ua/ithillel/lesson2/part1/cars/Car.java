@@ -1,4 +1,4 @@
-package part1.cars;
+package ua.ithillel.lesson2.part1.cars;
 
 public class Car {
 

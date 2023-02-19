@@ -1,5 +1,7 @@
-import phonebook.PhoneBook;
-import phonebook.Record;
+package ua.ithillel.lesson6.main.java;
+
+import ua.ithillel.lesson6.main.java.phonebook.PhoneBook;
+import ua.ithillel.lesson6.main.java.phonebook.Record;
 
 import java.util.List;
 

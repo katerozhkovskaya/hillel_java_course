@@ -1,3 +1,5 @@
+package ua.ithillel.lesson5.main.java;
+
 import java.util.Arrays;
 
 public class MyList implements HillelList {

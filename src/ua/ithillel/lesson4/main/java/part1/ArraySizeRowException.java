@@ -1,4 +1,4 @@
-package part1;
+package ua.ithillel.lesson4.main.java.part1;
 
 public class ArraySizeRowException extends IndexOutOfBoundsException {
     public ArraySizeRowException() {

@@ -1,6 +1,5 @@
-package part5;
+package ua.ithillel.lesson3.main.java.part5;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package part2.animals;
+package ua.ithillel.lesson2.part2.animals;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

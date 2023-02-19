@@ -1,8 +1,10 @@
+package ua.ithillel.lesson5.test.java;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.ithillel.lesson5.main.java.MyList;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MyLessonFiveTest {
     MyList list = new MyList();
@@ -19,46 +21,46 @@ public class MyLessonFiveTest {
     public void checkAdd() {
         int startSize = list.size();
         list.add("5");
-        assertThat(startSize + 1).isEqualTo(list.size());
-        assertThat(list.contains("5")).isTrue();
+        assertEquals((startSize + 1), list.size());
+        assertTrue(list.contains("5"));
         list.add("6");
-        assertThat(startSize + 2).isEqualTo(list.size());
-        assertThat(list.contains("5")).isTrue();
+        assertEquals((startSize + 2), list.size());
+        assertTrue(list.contains("5"));
     }
 
     @Test
     public void checkRemove() {
         int startSize = list.size();
         list.remove(2);
-        assertThat(startSize - 1).isEqualTo(list.size());
-        assertThat(list.contains("3")).isFalse();
+        assertEquals(startSize - 1, list.size());
+        assertFalse(list.contains("3"));
     }
 
     @Test
     public void checkContains() {
-        assertThat(list.contains("2")).isTrue();
-        assertThat(list.contains("9")).isFalse();
+        assertTrue(list.contains("2"));
+        assertFalse(list.contains("9"));
     }
 
     @Test
     public void checkIndexOf() {
-        assertThat(list.indexOf("2")).isEqualTo(1);
-        assertThat(list.indexOf("9")).isEqualTo(-1);
+        assertEquals(list.indexOf("2"), 1);
+        assertEquals(list.indexOf("9"), -1);
     }
 
     @Test
     public void checkSize() {
-        assertThat(list.size()).isEqualTo(4);
+        assertEquals(list.size(), 4);
         list.add("5");
-        assertThat(list.size()).isEqualTo(5);
+        assertEquals(list.size(), 5);
         list.remove(4);
-        assertThat(list.size()).isEqualTo(4);
+        assertEquals(list.size(), 4);
     }
 
     @Test
     public void checkGet() {
-        assertThat(list.get(0)).isEqualTo("1");
-        assertThat(list.get(3)).isEqualTo("4");
+        assertEquals(list.get(0), "1");
+        assertEquals(list.get(3), "4");
     }
 
     @Test

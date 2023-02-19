@@ -1,3 +1,5 @@
+package ua.ithillel.lesson5.main.java;
+
 public interface HillelList {
     /**
      * Додати новий елемент до списка

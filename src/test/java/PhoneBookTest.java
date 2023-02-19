@@ -1,5 +1,5 @@
-import main.java.lesson6.phonebook.PhoneBook;
-import main.java.lesson6.phonebook.Record;
+import lesson6.phonebook.PhoneBook;
+import lesson6.phonebook.Record;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

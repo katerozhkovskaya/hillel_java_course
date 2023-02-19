@@ -1,4 +1,4 @@
-package lesson6.phonebook;
+package main.java.lesson6.phonebook;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

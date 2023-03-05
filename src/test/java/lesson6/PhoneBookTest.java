@@ -1,3 +1,5 @@
+package lesson6;
+
 import lesson6.phonebook.PhoneBook;
 import lesson6.phonebook.Record;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,5 @@
-import lesson7.FileData;
-import lesson7.FileNavigator;
-import lesson7.PathNotEqualFilePathException;
+package lesson7;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

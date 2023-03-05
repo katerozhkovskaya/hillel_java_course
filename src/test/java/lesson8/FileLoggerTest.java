@@ -43,4 +43,5 @@ public class FileLoggerTest {
         assertEquals(LoggingLevel.DEBUG, result.getLevel());
         assertEquals(10, result.getMaxSize());
     }
+
 }

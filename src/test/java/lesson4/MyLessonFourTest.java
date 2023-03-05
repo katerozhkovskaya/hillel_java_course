@@ -1,3 +1,5 @@
+package lesson4;
+
 import lesson4.part1.ArrayDataExeption;
 import lesson4.part1.ArraySizeColumnException;
 import lesson4.part1.ArraySizeRowException;

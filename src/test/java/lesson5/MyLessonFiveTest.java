@@ -1,11 +1,11 @@
+package lesson5;
 
-import lesson5.MyList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class MyLessonSevenTest {
+public class MyLessonFiveTest {
     MyList list = new MyList();
 
     @BeforeEach

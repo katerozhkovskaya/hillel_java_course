@@ -25,7 +25,6 @@ public class ArrayInitializer {
 
         System.arraycopy(arr1, 0, array, 0, half);
         System.arraycopy(arr2, 0, array, half, half);
-        System.out.println();
     }
 
     private static void calculateArrayValues(double[] array) {

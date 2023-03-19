@@ -29,7 +29,7 @@ public class ArrayInitializerWithFork {
             } else {
                 int half = (start + end) / 2;
                 ArrayInitializerTask firstTask = new ArrayInitializerTask(array, start, half);
-                ArrayInitializerTask secondTask = new ArrayInitializerTask(array, half, array.length);
+                ArrayInitializerTask secondTask = new ArrayInitializerTask(array, half, end);
 
                 firstTask.fork();
                 secondTask.fork();

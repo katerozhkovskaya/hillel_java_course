@@ -1,16 +1,18 @@
 package lesson14;
 
-        import lombok.AllArgsConstructor;
-        import lombok.Getter;
-        import lombok.ToString;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.ToString;
 
-        import java.time.LocalDate;
-        import java.util.*;
-        import java.util.stream.Collectors;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Getter
 @AllArgsConstructor
 @ToString
+@Builder(toBuilder = true)
 public class Product {
     private String category;
     private double price;
@@ -28,7 +30,7 @@ public class Product {
         return products.stream()
                 .filter(product -> product.getCategory().equals("Book"))
                 .filter(Product::isDiscount)
-                .map(product -> new Product(product.getCategory(), product.getPrice() * 0.9, false, product.getDateAdded()))
+                .map(product -> product.toBuilder().price(product.getPrice() * 0.9).build())
                 .toList();
     }
 

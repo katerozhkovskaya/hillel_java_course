@@ -1,4 +1,4 @@
-package lesson22;
+package lesson21;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

@@ -9,7 +9,7 @@ public class Main {
         var dataSource = dataSource();
         var service = HeroFactory.createService(dataSource);
 
-        service.delete(5L);
+        service.delete(5);
 
         service.findAll().stream().limit(10).forEach(System.out::println);
 

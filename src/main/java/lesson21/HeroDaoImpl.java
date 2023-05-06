@@ -1,17 +1,16 @@
 package lesson21;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
 public class HeroDaoImpl implements HeroDao {
     private final DataSource dataSource;
+    public HeroDaoImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
 
     @Override
     public List<Hero> findAll() {
@@ -65,7 +64,7 @@ public class HeroDaoImpl implements HeroDao {
     }
 
     @Override
-    public boolean delete(Long id) {
+    public boolean delete(int id) {
         var sql = String.format("delete from heroes where id = %d", id);
         try (var connection = dataSource.getConnection();
              var statement = connection.createStatement()) {

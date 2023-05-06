@@ -21,7 +21,7 @@ public class HeroService {
                 .toList();
     }
 
-    public Boolean delete(Long id) {
+    public Boolean delete(int id) {
         return dao.delete(id);
     }
 

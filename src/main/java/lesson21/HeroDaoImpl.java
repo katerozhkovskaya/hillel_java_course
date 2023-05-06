@@ -65,7 +65,25 @@ public class HeroDaoImpl implements HeroDao {
     }
 
     @Override
-    public boolean delete(Long id) {
+    public List<Hero> findById(int id) {
+        var sql = String.format(
+                "SELECT h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, " +
+                        "h.skin_color, h.alignment, h.weight, p.name AS publisher \n" +
+                        "FROM heroes h\n" +
+                        "JOIN publishers p ON h.publisher_id = p.id\n" +
+                        "WHERE h.id = '%s'", id);
+        try (var connection = dataSource.getConnection();
+             var statement = connection.createStatement()) {
+            var result = statement.executeQuery(sql);
+            return mapHeroes(result);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+
+    @Override
+    public boolean delete(int id) {
         var sql = String.format("delete from heroes where id = %d", id);
         try (var connection = dataSource.getConnection();
              var statement = connection.createStatement()) {
@@ -93,10 +111,10 @@ public class HeroDaoImpl implements HeroDao {
     }
 
     @Override
-    public void update(Hero hero) {
+    public void update(Hero hero, int id) {
         var sql = String.format("UPDATE heroes\n" +
                 "SET  weight=%d\n" +
-                "WHERE name='%s'", hero.weight, hero.name);
+                "WHERE id='%s'", hero.weight, id);
         try (var connection = dataSource.getConnection();
              var statement = connection.createStatement()) {
             statement.execute(sql);

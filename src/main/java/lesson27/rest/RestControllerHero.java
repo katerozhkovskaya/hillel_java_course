@@ -8,10 +8,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@org.springframework.web.bind.annotation.RestController
+@RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
-public class RestController {
+public class RestControllerHero {
     private final HeroService heroService;
 
     @GetMapping("/heroes")

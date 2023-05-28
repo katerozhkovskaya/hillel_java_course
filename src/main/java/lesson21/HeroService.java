@@ -21,7 +21,7 @@ public class HeroService {
                 .toList();
     }
 
-    public Boolean delete(Long id) {
+    public Boolean delete(int id) {
         return dao.delete(id);
     }
 
@@ -29,7 +29,14 @@ public class HeroService {
         dao.create(hero);
     }
 
-    public void update(Hero hero) {
-        dao.update(hero);
+    public void update(Hero hero, int id) {
+        dao.update(hero, id);
+    }
+
+    public HeroDto findById(int id) {
+        return dao.findById(id).stream()
+                .map(HeroDto::from)
+                .findFirst()
+                .orElse(null);
     }
 }

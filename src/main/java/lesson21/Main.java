@@ -9,7 +9,7 @@ public class Main {
         var dataSource = dataSource();
         var service = HeroFactory.createService(dataSource);
 
-        service.delete(5L);
+        service.delete(5);
 
         service.findAll().stream().limit(10).forEach(System.out::println);
 
@@ -27,7 +27,7 @@ public class Main {
                 .build());
 
         System.out.println(service.findByName("Kate Rozhkovska"));
-        service.update(Hero.builder().weight(55).name("Kate Rozhkovska").build());
+        service.update(Hero.builder().weight(55).name("Kate Rozhkovska").build(), 3);
     }
 
     private static DataSource dataSource() {

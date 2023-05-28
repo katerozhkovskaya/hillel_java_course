@@ -6,10 +6,11 @@ public interface HeroDao {
     List<Hero> findAll();
 
     List<Hero> findByName(String name);
+    List<Hero> findById(int id);
 
     void create(Hero hero);
 
-    void update(Hero hero);
+    void update(Hero hero, int id);
 
-    boolean delete(Long id);
+    boolean delete(int id);
 }

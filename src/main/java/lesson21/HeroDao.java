@@ -12,5 +12,7 @@ public interface HeroDao {
 
     void update(Hero hero, int id);
 
+    void update(Hero hero);
+
     boolean delete(int id);
 }

@@ -24,8 +24,18 @@ public class DummyHeroDao implements HeroDao {
     }
 
     @Override
+    public List<Hero> findById(int id) {
+        return null;
+    }
+
+    @Override
     public void create(Hero hero) {
         db.add(hero);
+    }
+
+    @Override
+    public void update(Hero hero, int id) {
+
     }
 
     @Override

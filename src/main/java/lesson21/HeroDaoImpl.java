@@ -64,6 +64,11 @@ public class HeroDaoImpl implements HeroDao {
     }
 
     @Override
+    public List<Hero> findById(int id) {
+        return null;
+    }
+
+    @Override
     public boolean delete(int id) {
         var sql = String.format("delete from heroes where id = %d", id);
         try (var connection = dataSource.getConnection();
@@ -89,6 +94,11 @@ public class HeroDaoImpl implements HeroDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public void update(Hero hero, int id) {
+
     }
 
     @Override

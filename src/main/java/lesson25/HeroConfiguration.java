@@ -16,7 +16,7 @@ import static lesson22.HeroFabric.createService;
 
 
 @Configuration
-@ComponentScan("ua.hillel_java_course.lesson25")
+@ComponentScan("lesson25")
 @PropertySource("classpath:application.properties")
 public class HeroConfiguration {
 

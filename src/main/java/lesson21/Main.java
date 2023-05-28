@@ -26,6 +26,7 @@ public class Main {
                 .weight(50)
                 .build());
 
+
         System.out.println(service.findByName("Kate Rozhkovska"));
         service.update(Hero.builder().weight(55).name("Kate Rozhkovska").build(), 3);
     }

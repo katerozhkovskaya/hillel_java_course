@@ -23,10 +23,8 @@ public class BaseEntity {
     private Long id;
 
     @CreationTimestamp
-    @Column(name = "created_at")
     private Instant createdAt;
 
     @UpdateTimestamp
-    @Column(name = "updated_at")
     private Instant updatedAt;
 }

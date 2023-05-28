@@ -18,8 +18,8 @@ public class HeroClient {
                 var heroSocket = new Socket(SERVER_HOST, SERVER_PORT);
                 var writer = new PrintWriter(heroSocket.getOutputStream(), true);
                 var reader = new BufferedReader(new InputStreamReader(heroSocket.getInputStream()))) {
-            String userInput;
-            while ((userInput = scanner.nextLine()) != null) {
+            while (true) {
+                String userInput = scanner.nextLine();
                 writer.println(userInput);
                 if (userInput.equals("exit")) {
                     System.out.println("Server disconnected");

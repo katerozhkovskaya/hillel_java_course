@@ -31,19 +31,17 @@ public class HeroClientHandler implements Runnable {
             while ((inputLine = reader.readLine()) != null) {
                 System.out.println("Received: " + inputLine);
                 String[] value = inputLine.split(" ", 2);
-                if (value[0].equals("name")) {
-                    HeroDto heroDto = heroService.findByName(value[1]).stream().findFirst().orElse(null);
-                    if (heroDto != null) {
-                        String heroJson = objectMapper.writeValueAsString(heroDto);
+                switch (value[0]) {
+                    case "name" -> {
+                        HeroDto heroDto = heroService.findByName(value[1]).stream().findFirst().orElse(null);
+                        String heroJson = (heroDto != null) ? objectMapper.writeValueAsString(heroDto) : "Hero is not found";
                         writer.println(heroJson);
-                    } else {
-                        writer.println("Hero is not found");
                     }
-                } else if (value[0].equals("exit")) {
-                    System.out.println("Client disconnected");
-                    break;
-                } else {
-                    writer.println("Unknown command " + value[0] + ". Try again");
+                    case "exit" -> {
+                        System.out.println("Client disconnected");
+                        return;
+                    }
+                    default -> writer.println("Unknown command " + value[0] + ". Try again");
                 }
             }
         } catch (IOException e) {

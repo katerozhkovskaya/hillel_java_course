@@ -1,7 +1,10 @@
 package lesson22;
 
+import lombok.ToString;
+
 import java.util.List;
 
+@ToString
 public class HeroDto {
     private String name;
     private List<String> movies;

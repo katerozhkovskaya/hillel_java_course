@@ -14,7 +14,7 @@ public class HeroDaoImpl implements HeroDao {
 
     @Override
     public List<Hero> findAll() {
-        var sql = "SELECT h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, h.skin_color, h.alignment, " +
+        var sql = "SELECT h.id, h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, h.skin_color, h.alignment, " +
                 "h.weight, p.name AS publisher \n" +
                 "FROM heroes h\n" +
                 "JOIN publishers p ON h.publisher_id = p.id";
@@ -31,6 +31,7 @@ public class HeroDaoImpl implements HeroDao {
         var heroes = new ArrayList<Hero>();
         while (result.next()) {
             heroes.add(Hero.builder()
+                    .id(result.getInt("id"))
                     .name(result.getString("name"))
                     .gender(result.getString("gender"))
                     .eyeColor(result.getString("eye_color"))
@@ -49,7 +50,7 @@ public class HeroDaoImpl implements HeroDao {
     @Override
     public List<Hero> findByName(String name) {
         var sql = String.format(
-                "SELECT h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, " +
+                "SELECT h.id, h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, " +
                         "h.skin_color, h.alignment, h.weight, p.name AS publisher \n" +
                         "FROM heroes h\n" +
                         "JOIN publishers p ON h.publisher_id = p.id\n" +
@@ -65,7 +66,19 @@ public class HeroDaoImpl implements HeroDao {
 
     @Override
     public List<Hero> findById(int id) {
-        return null;
+        var sql = String.format(
+                "SELECT h.id, h.name, h.gender, h.eye_color, h.race, h.hair_color, h.height, " +
+                        "h.skin_color, h.alignment, h.weight, p.name AS publisher \n" +
+                        "FROM heroes h\n" +
+                        "JOIN publishers p ON h.publisher_id = p.id\n" +
+                        "WHERE h.id = '%s'", id);
+        try (var connection = dataSource.getConnection();
+             var statement = connection.createStatement()) {
+            var result = statement.executeQuery(sql);
+            return mapHeroes(result);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override

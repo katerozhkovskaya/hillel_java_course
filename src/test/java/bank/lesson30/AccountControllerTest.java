@@ -1,4 +1,4 @@
-package lesson30;
+package bank.lesson30;
 
 import bank.BankApplication;
 import bank.repository.account.Account;

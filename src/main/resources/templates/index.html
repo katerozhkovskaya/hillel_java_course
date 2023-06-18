@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Heroes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: .5rem 1rem;
+            font-size: .9rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<p th:text="'Hello! ' + ${name} + '!'"/>
+
+<div th:switch="${heroes}">
+    <h2 th:case="null">No heroes yet!</h2>
+    <div th:case="*">
+        <h2>Heroes</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>gender</th>
+                <th>eyeColor</th>
+                <th>race</th>
+                <th>hairColor</th>
+                <th>height</th>
+                <th>skinColor</th>
+                <th>alignment</th>
+                <th>weight</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="hero : ${heroes}">
+                <td th:text="${hero.name}"></td>
+                <td th:text="${hero.gender}"></td>
+                <td th:text="${hero.eyeColor}"></td>
+                <td th:text="${hero.race}"></td>
+                <td th:text="${hero.hairColor}"></td>
+                <td th:text="${hero.height}"></td>
+                <td th:text="${hero.skinColor}"></td>
+                <td th:text="${hero.alignment}"></td>
+                <td th:text="${hero.weight}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

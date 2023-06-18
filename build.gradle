@@ -44,6 +44,7 @@ dependencies {
     implementation 'org.springframework:spring-orm:6.0.9'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.flywaydb:flyway-core:9.19.0'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 }
 
 jar {
@@ -51,7 +52,7 @@ jar {
 }
 
 springBoot {
-    mainClass = 'bank.BankApplication'
+    mainClass = 'lesson36.CurrencyController'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17

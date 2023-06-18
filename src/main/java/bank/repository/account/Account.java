@@ -22,4 +22,5 @@ public class Account extends BaseEntity {
     private Long balance;
     @Column(name = "person_id")
     private String personId;
+    private String currency;
 }

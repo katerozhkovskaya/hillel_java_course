@@ -35,12 +35,12 @@ public class AccountService {
     }
 
     public void deleteAccount(String uid) {
-        var account =  accountRepository.findByUid(uid).orElseThrow();
+        var account = accountRepository.findByUid(uid).orElseThrow();
         accountRepository.delete(account);
     }
 
     public void deletePersonAccounts(String uid) {
-        var account =  accountRepository.findByPersonId(uid);
+        var account = accountRepository.findByPersonId(uid);
         account.forEach(accountRepository::delete);
     }
 
@@ -56,6 +56,7 @@ public class AccountService {
                 .balance(account.balance())
                 .iban(account.iban())
                 .personId(account.personId())
+                .currency(account.currency())
                 .build());
         return mapAccount(savedAccount);
     }
@@ -76,6 +77,7 @@ public class AccountService {
                 .iban(account.getIban())
                 .balance(account.getBalance())
                 .personId(account.getPersonId())
+                .currency(account.getCurrency())
                 .build();
     }
 }

@@ -1,6 +1,7 @@
 package bank.service;
 
 import bank.repository.currency.CurrencyConverter;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Currency;
@@ -10,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
 public class PersonOperationsService {
     private final CurrencyConverter currencyConverter;
 
-    public PersonOperationsService(CurrencyConverter currencyConverter) {
+    public PersonOperationsService(@Qualifier("currencyApiCurrencyConverter") CurrencyConverter currencyConverter) {
         this.currencyConverter = currencyConverter;
     }
 

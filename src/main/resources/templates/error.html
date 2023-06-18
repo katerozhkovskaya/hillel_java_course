@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: Calc(100vh);
+        }
+
+        .error-container {
+            background-color: #fff;
+            border-radius: 4px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-container h1 {
+            font-size: 1.5rem;
+            color: #ff5a5a;
+            margin-bottom: 1rem;
+        }
+
+        .error-container p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <h1>Error</h1>
+    <p th:text="'Reason: ' + ${message} + '!'">Reason: Example error message!</p>
+</div>
+</body>
+</html>

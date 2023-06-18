@@ -1,6 +1,6 @@
-package bank.repository;
+package bank.repository.person;
 
-import jakarta.persistence.Column;
+import bank.repository.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -10,15 +10,14 @@ import lombok.experimental.SuperBuilder;
 
 @Data
 @Entity
-@Table(name = "accounts")
+@Table(name = "persons")
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@SuperBuilder
-public class Account extends BaseEntity {
+public class Person extends BaseEntity {
 
     private String uid;
-    private String iban;
-    private Long balance;
-    @Column(name = "person_id")
-    private String personId;
+    private String name;
+    private String email;
+
 }

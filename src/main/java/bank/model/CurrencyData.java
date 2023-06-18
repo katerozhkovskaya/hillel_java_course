@@ -1,4 +1,4 @@
-package lesson36.model;
+package bank.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

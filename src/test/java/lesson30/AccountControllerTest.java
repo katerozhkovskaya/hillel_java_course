@@ -1,8 +1,8 @@
 package lesson30;
 
 import bank.BankApplication;
-import bank.repository.Account;
-import bank.repository.AccountRepository;
+import bank.repository.account.Account;
+import bank.repository.account.AccountRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

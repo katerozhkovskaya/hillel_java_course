@@ -1,9 +1,9 @@
-package bank;
+package bank.controllers;
 
-import bank.service.AccountDto;
-import bank.service.AccountService;
-import bank.service.PersonDto;
-import bank.service.PersonService;
+import bank.service.account.AccountDto;
+import bank.service.account.AccountService;
+import bank.service.person.PersonDto;
+import bank.service.person.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;

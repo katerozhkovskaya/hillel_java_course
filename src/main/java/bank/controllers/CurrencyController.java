@@ -1,5 +1,6 @@
-package lesson36;
+package bank.controllers;
 
+import bank.repository.currency.CurrencyApiCurrencyConverter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,7 +1,7 @@
-package lesson36;
+package bank.repository.currency;
 
-import lesson36.config.CurrencyProperties;
-import lesson36.model.CurrencyResponse;
+import bank.currency_config.CurrencyProperties;
+import bank.model.CurrencyResponse;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 

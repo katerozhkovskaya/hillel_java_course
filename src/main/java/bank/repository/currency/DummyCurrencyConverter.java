@@ -1,4 +1,4 @@
-package lesson36;
+package bank.repository.currency;
 
 import org.springframework.stereotype.Service;
 

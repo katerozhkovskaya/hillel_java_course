@@ -1,4 +1,4 @@
-package bank.service;
+package bank.service.account;
 
 import lombok.Builder;
 

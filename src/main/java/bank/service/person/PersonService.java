@@ -1,7 +1,7 @@
-package bank.service;
+package bank.service.person;
 
-import bank.repository.Person;
-import bank.repository.PersonRepository;
+import bank.repository.person.Person;
+import bank.repository.person.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

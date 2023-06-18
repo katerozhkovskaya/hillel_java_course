@@ -1,4 +1,4 @@
-package lesson36.config;
+package bank.currency_config;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
